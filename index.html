@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Naturals</title>
+    <link rel="icon" href="./paw.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <head>
+        <div class="container header-container">
+            <nav class="page-nav">
+                <div class="logo-thumb">
+                    <a href="./index.html" class="logo-link">
+                        <img src="./images/logo.webp" alt="Page logo" class="logo-img">
+                    </a>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Results</a>
+                    </li>
+                </ul>
+                <button type="button" class="menu-open">
+                    <svg class="open-icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+        <div class="mob-menu">
+            <button type="button" class="menu-close">
+                <svg class="close-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <nav class="mob-menu-nav">
+                <ul class="mob-nav-list">
+                    <li class="mob-nav-item">
+                        <a href="#order" class="mob-nav-link">Order</a>
+                    </li>
+                    <li class="mob-nav-item">
+                        <a href="#about" class="mob-nav-link">About</a>
+                    </li>
+                    <li class="mob-nav-item">
+                        <a href="#results" class="mob-nav-link">Results</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </head>
+
+    <main>
+        <section class="section hero-section">
+            <div class="container hero-container">
+                <h1 class="hero-title">Pet Naturals of Vermont, Calming, For Cats</h1>
+                <div class="hero-main">
+                    <div class="hero-left">
+                        <p class="left-text">Your cat deserves the best pet supplement the world has to offer.
+                            That's what's in the package. </p>
+                        <ul class="left-list">
+                            <li class="left-item">
+                                <svg class="left-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-paw"></use>
+                                </svg>
+                                <p class="left-list-text">Features a patented calming blends</p>
+                            </li>
+                            <li class="left-item">
+                                <svg class="left-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-paw"></use>
+                                </svg>
+                                <p class="left-list-text">Doesn&apos;t contain herbal ingredients</p>
+                            </li>
+                            <li class="left-item">
+                                <svg class="left-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-paw"></use>
+                                </svg>
+                                <p class="left-list-text">Helps manage everyday stress</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="./images/hero-cats.webp" alt="Cats" class="hero-img">
+                    <div class="hero-right">
+                        <div class="right-timer" id="order">
+                            <p class="timer-text">Time left</p>
+                            <p class="timer-time">2:00:00</p>
+                            <div class="timer-price">
+                                <p class="timer-old-price">120uah<span class="line"></span></p>
+                                <p class="timer-new-price">60uah</p>
+                            </div>
+                        </div>
+                        <form action="" class="right-form">
+                            <div class="input-wrapper">
+                                <input type="text" id="user-name" name="user-name" class="form-input"
+                                    placeholder="Name">
+                                <svg class="form-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-paw"></use>
+                                </svg>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="tel" id="user-tel" name="user-tel" class="form-input"
+                                    placeholder="+38(0__)___-__-__">
+                                <svg class="form-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-paw"></use>
+                                </svg>
+                            </div>
+                            <button type="submit" class="form-btn">Order</button>
+                        </form>
+                        <p class="right-date">Order date: 17.11.2021</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="section advice-section id="about">
+            <div class="container advice-container">
+                <h2 class="advice-title">From the manufacturer</h2>
+                <ul class="advice-list">
+                    <li class="advice-item">
+                        <img src="./images/cat.webp" alt="Cat" class="advice-img">
+                        <div class="advice-info">
+                            <p class="advice-subtitle">Keep Calm and Carry On</p>
+                            <p class="advice-text">Are you searching for a better way to ease your pet’s separation
+                                anxiety or stress? Calming chews help relieve
+                                pet stress without corn, wheat or artificial ingredients. </p>
+                        </div>
+                    </li>
+                    <li class="advice-item">
+                        <img src="./images/peace.webp" alt="Peace" class="advice-img">
+                        <div class="advice-info">
+                            <p class="advice-subtitle">Peace of Mind</p>
+                            <p class="advice-text">Pet Naturals of Vermont’s research-backed formula makes it safe to
+                                double or triple the amount in times of added stress. </p>
+                        </div>
+                    </li>
+                    <li class="advice-item">
+                        <img src="./images/treat.webp" alt="Treats" class="advice-img">
+                        <div class="advice-info">
+                            <p class="advice-subtitle">More than a Tasty Treat</p>
+                            <p class="advice-text">Don’t let its satisfying chicken liver flavor fool you. Technically,
+                                Calming isn’t a treat but it sure tastes like one. Reward your best buddy with a Calming
+                                chew.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section using-section" id="results">
+            <div class="container using-container">
+                <h2 class="using-title">Best Uses for Calming Chews</h2>
+                <div class="using-main">
+                    <div class="using-text-wrapper">
+                        <p class="using-text">
+                            Car rides. Vet visits. Thunderstorms. Boarding. Parties. These are just a handful of times
+                            when
+                            Calming chews may come in handy. Does your dog hate to be left home alone? Does your cat
+                            love
+                            hiding
+                            under the bed? Serve up a Calming chew to help soothe your furry pal&apos;s anxiety and make
+                            your
+                            life
+                            easier, too! <br>
+                            <br>
+                            For Best Results: <br>
+                            <br>
+                            We recommend administering Calming chews 30 minutes prior to a stressful event. The
+                            30-minute
+                            activation period gives you a chance to increase dosage if you&apos;re not seeing expected
+                            results.
+                            Calming is safe for unique stress inducing events and for long-term use to help manage
+                            everyday
+                            stress.
+                        </p>
+                    </div>
+                    <img src="./images/using.webp" alt="Cat" class="advice-item">
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
