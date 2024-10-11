@@ -1,5 +1,7 @@
 "use strict";
 
+// Функціонал мобільного меню
+
 modalHandler();
 
 function modalHandler() {
@@ -51,12 +53,10 @@ function modalHandler() {
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Отключаем автоматическое восстановление прокрутки
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
 
-    // Прокручиваем страницу вверх при загрузке
     window.scrollTo(0, 0);
 
     document.querySelectorAll("nav a").forEach((anchor) => {
@@ -70,6 +70,8 @@ function modalHandler() {
     });
   });
 }
+
+//Таймер і дата
 
 window.onload = function () {
   startCountdown();
@@ -107,6 +109,8 @@ function showCurrentDate() {
   document.getElementById("order-date").textContent = date;
 }
 
+// Маска
+
 let inputsTel = document.querySelectorAll('input[type="tel"]');
 
 const initializePhoneMask = (inputSelector) => {
@@ -124,5 +128,4 @@ const initializePhoneMask = (inputSelector) => {
   }
 };
 
-// Инициализируем маску для нужного инпута
-initializePhoneMask("#user-tel"); // замените '#inputsTel' на ваш селектор
+initializePhoneMask("#user-tel");
