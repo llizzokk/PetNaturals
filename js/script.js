@@ -129,3 +129,14 @@ const initializePhoneMask = (inputSelector) => {
 };
 
 initializePhoneMask("#user-tel");
+
+// Очищення форми при сабміті
+
+document
+  .querySelector(".right-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    document.getElementById("user-name").value = "";
+    document.getElementById("user-tel").value = "";
+  });
