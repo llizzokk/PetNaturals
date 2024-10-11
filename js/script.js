@@ -109,7 +109,20 @@ function showCurrentDate() {
 
 let inputsTel = document.querySelectorAll('input[type="tel"]');
 
-Inputmask({
-  mask: "+38(099) 999-99-99",
-  showMaskOnHover: false,
-}).mask(inputsTel);
+const initializePhoneMask = (inputSelector) => {
+  const input = document.querySelector(inputSelector);
+
+  if (input) {
+    const phoneMask = new Inputmask({
+      mask: "+38(099) 999-99-99",
+      showMaskOnHover: false,
+    });
+
+    phoneMask.mask(input);
+  } else {
+    console.error(`Input with selector "${inputSelector}" not found.`);
+  }
+};
+
+// Инициализируем маску для нужного инпута
+initializePhoneMask("#user-tel"); // замените '#inputsTel' на ваш селектор
