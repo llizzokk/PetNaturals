@@ -202,9 +202,11 @@ button {
   color: #f6f7e4;
   text-align: center;
   margin-bottom: 48px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .left-list {
+  box-sizing: border-box;
   background-color: #7fb3e1;
   display: flex;
   flex-direction: column;
@@ -354,9 +356,6 @@ button {
   background-size: contain;
 }
 
-.advice-container {
-}
-
 .advice-title {
   font-size: 36px;
   text-align: center;
@@ -384,11 +383,9 @@ button {
   padding: 14px 15px;
 }
 
-.advice-img {
-  margin-bottom: 17px;
-}
-
 .advice-info {
+  margin-top: auto;
+  box-sizing: border-box;
   border-radius: 20px;
   background: rgba(161, 211, 55, 0.4);
   padding: 20px 14px 30px 14px;
@@ -418,9 +415,6 @@ button {
   background-size: cover;
 }
 
-.using-container {
-}
-
 .using-title {
   font-weight: 700;
   font-size: 36px;
@@ -429,18 +423,14 @@ button {
   margin-bottom: 42px;
 }
 
-.using-main {
-}
-
 .using-text-wrapper {
   height: 850px;
-  background-image: url(/images/mobile-green.png);
+  background-image: url(/images/mobile-green.webp);
   box-sizing: border-box;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   padding: 60px 40px;
-  display: flex;
 }
 
 .using-text {
@@ -449,9 +439,6 @@ button {
   font-size: 18px;
   line-height: 128%;
   color: #483c08;
-}
-
-.using-img {
 }
 
 /* Media */
@@ -491,6 +478,7 @@ button {
   .nav-link {
     padding: 10px 0;
     font-size: 20px;
+    text-transform: uppercase;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #715d00;
@@ -539,165 +527,116 @@ button {
     margin: 0;
   }
 
-  .advice-section {
-  }
-  .advice-container {
-  }
   .advice-title {
+    font-size: 52px;
+    margin-bottom: 60px;
   }
-  .advice-list {
-  }
-  .advice-item {
-  }
-  .advice-img {
-  }
-  .advice-info {
-  }
-  .advice-subtitle {
-  }
-  .advice-text {
-  }
-  .using-section {
-  }
-  .using-container {
-  }
+
   .using-title {
+    font-size: 52px;
+    margin-bottom: 58px;
   }
+
   .using-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
   .using-text-wrapper {
-  }
-  .using-text {
-  }
-  .using-img {
+    height: 400px;
+    background-image: url(/images/tablet-green.webp);
+    padding: 40px 60px;
+    margin-bottom: 28px;
   }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1140px) {
   .container {
+    width: 1140px;
   }
-  .header-container {
-  }
-  .page-nav {
-  }
+
   .logo-thumb {
+    width: 329px;
+    height: 113px;
   }
-  .logo-link {
-  }
+
   .logo-img {
+    width: 283px;
   }
+
   .nav-list {
+    height: 102px;
+    width: 446px;
+    gap: 51px;
   }
-  .nav-item {
-  }
-  .nav-link {
-  }
-  .menu-open {
-  }
-  .js-open-menu {
-  }
-  .open-icon {
-  }
-  .mob-menu {
-  }
-  .js-menu-container {
-  }
-  .menu-close {
-  }
-  .js-close-menu {
-  }
-  .close-icon {
-  }
-  .mob-menu-nav {
-  }
-  .mob-nav-list {
-  }
-  .mob-nav-item {
-  }
-  .mob-nav-link {
-  }
-  .section {
-  }
+
   .hero-section {
+    padding: 156px 0 100px 0;
   }
-  .hero-container {
-  }
-  .hero-title {
-  }
+
   .hero-main {
+    align-items: end;
   }
+
+  .hero-title {
+    margin: 0 auto;
+    width: 578px;
+  }
+
   .hero-left {
+    width: 439px;
   }
+
   .left-text {
+    text-align: start;
+    margin-bottom: 60px;
   }
+
   .left-list {
+    max-width: 328px;
   }
-  .left-item {
-  }
-  .left-icon {
-  }
+
   .left-list-text {
+    font-size: 22px;
   }
+
   .hero-img {
+    width: 670px;
+    top: 60%;
+    left: 52%;
   }
-  .hero-right {
-  }
-  .right-timer {
-  }
-  .timer-text {
-  }
-  .timer-time {
-  }
-  .timer-price {
-  }
-  .timer-old-price {
-  }
-  .line {
-  }
-  .timer-new-price {
-  }
-  .right-form {
-  }
-  .input-wrapper {
-  }
-  .form-input {
-  }
-  .form-icon {
-  }
-  .form-btn {
-  }
-  .right-date {
-  }
-  .advice-section {
-  }
-  .advice-container {
-  }
-  .advice-title {
-  }
+
   .advice-list {
+    display: flex;
+    flex-direction: row;
+    gap: 84px;
   }
+
   .advice-item {
+    box-sizing: border-box;
+    width: 305px;
+    height: 439px;
   }
-  .advice-img {
-  }
+
   .advice-info {
+    height: 218px;
   }
-  .advice-subtitle {
-  }
-  .advice-text {
-  }
-  .using-section {
-  }
-  .using-container {
-  }
-  .using-title {
-  }
+
   .using-main {
+    flex-direction: row;
   }
+
   .using-text-wrapper {
+    height: 354px;
+    background-image: url(/images/desk-green.png);
+    padding: 40px 98px 40px 40px;
+    margin: 0 28px 0 0;
   }
+
   .using-text {
-  }
-  .using-img {
+    text-align: start;
+    width: 622px;
   }
 }
