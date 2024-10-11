@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pet Naturals</title>
     <link rel="icon" href="./paw.svg" type="image/x-icon">
-
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -32,15 +31,15 @@
                         <a href="#" class="nav-link">Results</a>
                     </li>
                 </ul>
-                <button type="button" class="menu-open">
-                    <svg class="open-icon" width="26" height="26">
+                <button type="button" class="menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="open-icon" width="26" height="26" data-menu-open>
                         <use href="./images/icons.svg#icon-menu"></use>
                     </svg>
                 </button>
             </nav>
         </div>
-        <div class="mob-menu">
-            <button type="button" class="menu-close">
+        <div class="mob-menu js-menu-container">
+            <button type="button" class="menu-close js-close-menu">
                 <svg class="close-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
@@ -60,6 +59,7 @@
             </nav>
         </div>
     </head>
+
 
     <main>
         <section class="section hero-section">
@@ -109,8 +109,8 @@
                                 </svg>
                             </div>
                             <div class="input-wrapper">
-                                <input type="tel" id="user-tel" name="user-tel" class="form-input"
-                                    placeholder="+38(0__)___-__-__">
+                                <input type="tel" id="user-tel" name="user-tel" class="form-input" required
+                                    placeholder="+38(0__)___-__-__" pattern="^\+\d{2}\(\d{3}\)\s\d{3}[-]\d{2}[-]\d{2}$">
                                 <svg class="form-icon" width="24" height="24">
                                     <use href="./images/icons.svg#icon-paw"></use>
                                 </svg>
@@ -130,7 +130,7 @@
                         <img src="./images/cat.webp" alt="Cat" class="advice-img">
                         <div class="advice-info">
                             <p class="advice-subtitle">Keep Calm and Carry On</p>
-                            <p class="advice-text">Are you searching for a better way to ease your pet’s separation
+                            <p class="advice-text">Are you searching for a better way to ease your pet&apos;s separation
                                 anxiety or stress? Calming chews help relieve
                                 pet stress without corn, wheat or artificial ingredients. </p>
                         </div>
@@ -139,7 +139,8 @@
                         <img src="./images/peace.webp" alt="Peace" class="advice-img">
                         <div class="advice-info">
                             <p class="advice-subtitle">Peace of Mind</p>
-                            <p class="advice-text">Pet Naturals of Vermont’s research-backed formula makes it safe to
+                            <p class="advice-text">Pet Naturals of Vermont&apos;s research-backed formula makes it safe
+                                to
                                 double or triple the amount in times of added stress. </p>
                         </div>
                     </li>
@@ -147,8 +148,10 @@
                         <img src="./images/treat.webp" alt="Treats" class="advice-img">
                         <div class="advice-info">
                             <p class="advice-subtitle">More than a Tasty Treat</p>
-                            <p class="advice-text">Don’t let its satisfying chicken liver flavor fool you. Technically,
-                                Calming isn’t a treat but it sure tastes like one. Reward your best buddy with a Calming
+                            <p class="advice-text">Don&apos;t let its satisfying chicken liver flavor fool you.
+                                Technically,
+                                Calming isn&apos;t a treat but it sure tastes like one. Reward your best buddy with a
+                                Calming
                                 chew.</p>
                         </div>
                     </li>
@@ -188,6 +191,10 @@
         </section>
     </main>
 
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/dependencyLibs/inputmask.dependencyLib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/body-scroll-lock/lib/bodyScrollLock.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

@@ -12,11 +12,14 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   margin: 0;
-  scroll-behavior: smooth;
 }
 
 /* reset */
@@ -111,19 +114,64 @@ button {
 /* mobile menu */
 
 .mob-menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #f6e791;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .menu-close {
+  position: absolute;
+  top: 15px;
+  right: 7px;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
 }
+
 .close-icon {
+  fill: #715d00;
 }
+
 .mob-menu-nav {
 }
+
 .mob-nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
+
 .mob-nav-item {
 }
+
 .mob-nav-link {
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #715d00;
 }
 
 /* hero */
@@ -262,6 +310,13 @@ button {
   border-radius: 30px;
   background-color: #f3efef;
   border: none;
+  font-size: 16px;
+  color: #777;
+}
+
+.form-input::placeholder {
+  font-size: 16px;
+  color: #777;
 }
 
 .form-icon {
@@ -342,6 +397,7 @@ button {
 }
 
 .advice-subtitle {
+  text-align: center;
   font-size: 22px;
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
@@ -379,19 +435,18 @@ button {
 }
 
 .using-text-wrapper {
-  display: inline-block;
-  background-image: url(/images/mobile-green.webp);
+  height: 850px;
+  background-image: url(/images/mobile-green.png);
+  box-sizing: border-box;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 0 40px;
+  padding: 60px 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .using-text {
-  padding: 10px;
+  text-align: center;
   font-weight: 400;
   font-size: 18px;
   line-height: 128%;

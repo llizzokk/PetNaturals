@@ -1,21 +1,58 @@
 "use strict";
 
+modalHandler();
+
+function modalHandler() {
+  const mobileMenu = document.querySelector(".js-menu-container");
+  const openMenuBtn = document.querySelector(".js-open-menu");
+  const closeMenuBtn = document.querySelector(".js-close-menu");
+
+  const toggleMenu = () => {
+    const anchors = mobileMenu.querySelectorAll('a[href*="#"]');
+    const isMenuOpen =
+      openMenuBtn.getAttribute("aria-expanded") === "true" || false;
+    openMenuBtn.setAttribute("aria-expanded", !isMenuOpen);
+    mobileMenu.classList.toggle("is-open");
+
+    const scrollLockMethod = !isMenuOpen
+      ? "disableBodyScroll"
+      : "enableBodyScroll";
+    bodyScrollLock[scrollLockMethod](document.body);
+
+    if (anchors.length === 0) return;
+
+    if (!isMenuOpen) {
+      anchors.forEach((anchor) => {
+        anchor.addEventListener("click", toggleMenu);
+      });
+      return;
+    }
+
+    anchors.forEach((anchor) => {
+      anchor.removeEventListener("click", toggleMenu);
+    });
+  };
+
+  openMenuBtn.addEventListener("click", toggleMenu);
+  closeMenuBtn.addEventListener("click", toggleMenu);
+
+  window.matchMedia("(min-width: 375px)").addEventListener("change", (e) => {
+    if (!e.matches) return;
+    mobileMenu.classList.remove("is-open");
+    openMenuBtn.setAttribute("aria-expanded", false);
+    bodyScrollLock.enableBodyScroll(document.body);
+  });
+}
+
 window.onload = function () {
-  // Скрипт для відліку часу
   startCountdown();
-
-  //   // Скрипт для маски номера телефону
-  //   initPhoneMask();
-
-  // Скрипт для відображення дати
   showCurrentDate();
 };
 
-// Функція зворотного відліку часу
 function startCountdown() {
-  var twoHours = 60 * 60 * 2;
-  var display = document.querySelector(".timer-time");
-  var timer = twoHours,
+  let twoHours = 60 * 60 * 2;
+  let display = document.querySelector(".timer-time");
+  let timer = twoHours,
     hours,
     minutes,
     seconds;
@@ -24,40 +61,28 @@ function startCountdown() {
     minutes = Math.floor((timer % 3600) / 60);
     seconds = Math.floor(timer % 60);
 
-    // Форматування
     hours = hours < 10 ? "0" + hours : hours;
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
 
     display.textContent = hours + ":" + minutes + ":" + seconds;
 
-    // Зменшуємо таймер
     if (--timer < 0) {
-      timer = 0; // Таймер зупиняється на нулі
+      timer = 0;
     }
   }, 1000);
 }
 
-// Функція для маски номера телефону
-// function initPhoneMask() {
-//   document.getElementById("user-tel").addEventListener("input", function (e) {
-//     let x = e.target.value.replace(/\D/g, "");
-//     e.target.value =
-//       "+38(0(" +
-//       x.slice(0, 3) +
-//       ")" +
-//       x.slice(3, 6) +
-//       "-" +
-//       x.slice(6, 8) +
-//       "-" +
-//       x.slice(8, 10);
-//   });
-// }
-
-// Функція для відображення поточної дати
 function showCurrentDate() {
-  var today = new Date();
-  var date =
+  let today = new Date();
+  let date =
     today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
   document.getElementById("order-date").textContent = date;
 }
+
+let inputsTel = document.querySelectorAll('input[type="tel"]');
+
+Inputmask({
+  mask: "+38(099) 999-99-99",
+  showMaskOnHover: false,
+}).mask(inputsTel);
