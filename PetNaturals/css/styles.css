@@ -566,7 +566,6 @@ button {
     top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none;
   }
 
   .hero-right {
@@ -579,14 +578,7 @@ button {
   }
 
   .advice-item {
-    flex-direction: row;
-    align-items: center;
     width: 100%;
-    height: auto;
-  }
-
-  .advice-info {
-    width: 770px;
   }
 
   .using-title {
@@ -672,8 +664,6 @@ button {
   }
 
   .advice-item {
-    flex-direction: column;
-    align-items: flex-end;
     box-sizing: border-box;
     width: 305px;
     height: 439px;
@@ -681,7 +671,6 @@ button {
 
   .advice-info {
     height: 218px;
-    width: auto;
   }
 
   .using-main {
